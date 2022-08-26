@@ -7,7 +7,7 @@ public class DevCore {
     ///   - hexString: a hexa decimal string representing a color scheme
     ///   - alpha: a value represents the color opacity
     /// - Returns: the ui color crospnding to given alpha string
-    class func colorFromHexString( _ hexString: String, alpha: CGFloat = 1) -> UIColor {
+    internal class func colorFromHexString( _ hexString: String, alpha: CGFloat = 1) -> UIColor {
         let r, g, b: CGFloat
         let offset = hexString.hasPrefix("#") ? 1 : 0
         let start = hexString.index(hexString.startIndex, offsetBy: offset)
@@ -21,5 +21,11 @@ public class DevCore {
             return UIColor(red: r, green: g, blue: b, alpha: alpha)
         }
         return UIColor(red: 0, green: 0, blue: 0, alpha: alpha)
+    }
+    
+    
+    /// the best color ever known
+    public static var razeColor: UIColor {
+        return colorFromHexString("006736")
     }
 }

@@ -7,7 +7,13 @@ final class DevCoreTests: XCTestCase {
         XCTAssertEqual(color, .green)
     }
     
+    func testRazeColorsAreEqual() {
+        let color = DevCore.colorFromHexString("006736")
+        XCTAssertEqual(color, DevCore.razeColor)
+    }
+    
     static var allTest = [
-        ("testColor_passed_hexString_should_return_corosponding_UIColor", testColor_passed_hexString_should_return_corosponding_UIColor)
+        ("testColor_passed_hexString_should_return_corosponding_UIColor", testColor_passed_hexString_should_return_corosponding_UIColor),
+         ("testRazeColorsAreEqual", testRazeColorsAreEqual)
     ]
 }
