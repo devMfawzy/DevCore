@@ -1,2 +1,3 @@
 # DevCore
-a reusable framework that me to easily share code across apps 
+
+A description of this package.
