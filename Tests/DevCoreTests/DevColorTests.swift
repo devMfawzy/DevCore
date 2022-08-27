@@ -1,15 +1,15 @@
 import XCTest
 @testable import DevCore
 
-final class DevCoreTests: XCTestCase {
+final class DevColorTests: XCTestCase {
     func testColor_passed_hexString_should_return_corosponding_UIColor() throws {
-        let color = DevCore.colorFromHexString("00FF00")
+        let color = DevCore.Color.fromHexString("00FF00")
         XCTAssertEqual(color, .green)
     }
     
     func testRazeColorsAreEqual() {
-        let color = DevCore.colorFromHexString("006736")
-        XCTAssertEqual(color, DevCore.razeColor)
+        let color = DevCore.Color.fromHexString("006736")
+        XCTAssertEqual(color, DevCore.Color.razeColor)
     }
     
     static var allTest = [
