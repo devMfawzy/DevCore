@@ -9,12 +9,25 @@ import XCTest
 @testable import DevCore
 
 final class DevNetworkingTests: XCTestCase {
-    func testExample() throws {
-        // This is an example of a functional test case.
-        // Use XCTAssert and related functions to verify your tests produce the correct results.
-        // Any test you write for XCTest can be annotated as throws and async.
-        // Mark your test throws to produce an unexpected failure when your test encounters an uncaught error.
-        // Mark your test async to allow awaiting for asynchronous code to complete. Check the results with assertions afterwards.
+    func testLoadDataCall() {
+        let manager = DevCore.Networking.Manager()
+        let expectaion = XCTestExpectation(description: "called for data")
+        guard let url = URL(string: "https://www.apple.com") else {
+            fatalError("Could not create url properly")
+        }
+        manager.loadData(from: url) { result in
+            expectaion.fulfill()
+            switch result {
+            case .success(let data):
+                XCTAssertNotNil(data, "response data is nil")
+            case .failure(let error):
+                XCTFail(error?.localizedDescription ?? "error forming error result")
+            }
+        }
+        wait(for: [expectaion], timeout: 5)
     }
 
+    static var allTests = [
+        ("testLoadDataCall", testLoadDataCall)
+    ]
 }
