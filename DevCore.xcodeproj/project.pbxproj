@@ -51,6 +51,7 @@
 		5BA67E2428BA8A8F00B807EB /* Color.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Color.swift; sourceTree = "<group>"; };
 		5BA67E2628BA8D3D00B807EB /* DevNetworkingTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DevNetworkingTests.swift; sourceTree = "<group>"; };
 		5BA67E2828BA8E1D00B807EB /* Networking.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Networking.swift; sourceTree = "<group>"; };
+		5BA67E2A28BAFAE500B807EB /* DevCore.podspec */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = DevCore.podspec; sourceTree = "<group>"; };
 		OBJ_12 /* DevColorTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DevColorTests.swift; sourceTree = "<group>"; };
 		OBJ_16 /* README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
 		OBJ_6 /* Package.swift */ = {isa = PBXFileReference; explicitFileType = sourcecode.swift; path = Package.swift; sourceTree = "<group>"; };
@@ -108,6 +109,7 @@
 		OBJ_5 /*  */ = {
 			isa = PBXGroup;
 			children = (
+				5BA67E2A28BAFAE500B807EB /* DevCore.podspec */,
 				OBJ_6 /* Package.swift */,
 				OBJ_7 /* Sources */,
 				OBJ_10 /* Tests */,
